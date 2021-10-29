@@ -13,27 +13,9 @@ So you could want to put your changing data into a yaml file and write
 a jinj2 template to output.
 
 You might want to put the generated code into multiple files by just
-saying where it should be stored, like:
+saying where it should be stored.
 
-```txt
-
-eat this
-
---- write/to/this/file.txt
-
-foo bar
-
----
-
-eat this too
-
---- write/to/that/file.txt
-
-FOO!
-
-```
-
-This is what this single file python module makes.
+This is what this tiny python module makes.
 
 **Attention: This module overwrites existing files!**
 
