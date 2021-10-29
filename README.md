@@ -2,15 +2,14 @@
 
 A simple codegenerator connecting yaml files (data) and jinja2 templates.
 
-Imagine you have got to create many files conforming to template or you
-find yourself often building up the same structures of directories and
-files.
+Imagine you have to create many files conforming to template or you find
+yourself often building up the same structures of directories and files.
 
-Imagine further, the key informations are changing always but the
-general layout is always the same.
+Imagine further, the key informations are changing always but the general
+layout is always the same.
 
-So you could want to put your changing data into a yaml file and write
-a jinj2 template to output.
+So you could want to put your changing data into a yaml file and write a
+jinj2 template to output.
 
 You might want to put the generated code into multiple files by just
 saying where it should be stored.
@@ -47,6 +46,10 @@ Hello {{ root.me }}!
 
 {# printing a property from the Greetings class... #}
 {{ root.greetings }}!
+
+--- output/hello-to-{{ root.me }}.txt
+
+Hello!
 
 ```
 
