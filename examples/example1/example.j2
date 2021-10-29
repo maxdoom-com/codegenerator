@@ -1,0 +1,20 @@
+{#
+    THIS IS AN EXAMPLE FOR codegenerator.py!
+
+    INITIAL LINES BEFORE A FILE MARK ("--- {directory/.../}{filename}")
+    WILL BE IGNORED!
+#}
+
+--- output/subdir/something.txt
+Yeah, it works!
+
+---
+
+{#
+    IT IS POSSIBLE TO PUT IN CONTENT HERE, THAT WILL BE EATEN UP!
+    THEREFORE JUST INSERT A FILE MARK ("---") WITHOUT A FILE NAME.
+#}
+
+--- output/hello.txt
+
+Hello {{root.me}}!
