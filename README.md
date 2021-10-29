@@ -35,6 +35,8 @@ FOO!
 
 This is what this single file python module makes.
 
+**Attention: This module overwrites existing files!**
+
 
 ## Example template file ("example.j2"):
 
@@ -58,7 +60,12 @@ Yeah, it works!
 
 --- output/hello.txt
 
-Hello {{root.me}}!
+{# printing a variable... #}
+Hello {{ root.me }}!
+
+{# printing a property from the Greetings class... #}
+{{ root.greetings }}!
+
 ```
 
 ## Example yaml file ("example.yaml"):
@@ -77,6 +84,10 @@ from codegenerator import TAG, compile_template, load_yaml
 
 class Greetings(TAG):
     yaml_tag = '!Greetings'
+
+    @property
+    def greetings(self):
+        return "Hello " + self.me
 
 compile_template("example.j2", root=load_yaml("example.yaml"))
 ```
