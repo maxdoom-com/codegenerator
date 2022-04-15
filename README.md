@@ -14,6 +14,9 @@ jinj2 template to output.
 You might want to put the generated code into multiple files by just
 saying where it should be stored.
 
+A special case has been added: `[[` and `]]` become `{{` and `}}` as
+well as `[%` and `%]` become `{%` and `%}` *after* code generation.
+
 This is what this tiny python module makes.
 
 **Attention: This module overwrites existing files!**

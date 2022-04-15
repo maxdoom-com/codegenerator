@@ -154,6 +154,10 @@ def compile_template(template, **data):
     # expand the template
     text  = tpl.render(**data)
 
+    # do some special replacements for jinja tags
+    text  = text.replace("[[", "{{").replace("]]", "}}")
+    text  = text.replace("[%", "{%").replace("%]", "%}")
+
     # get a mapping of files to their content
     files = split(text)
 
